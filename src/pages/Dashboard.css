@@ -1,0 +1,185 @@
+.dashboard-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: sans-serif;
+  transition: background 0.3s, color 0.3s;
+}
+
+.featured-game-section {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  margin-bottom: 30px;
+  background-color: #1f1f1f;
+  padding: 15px;
+  border-radius: 12px;
+}
+
+.featured-game-img {
+  width: 250px;
+  max-width: 35%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.featured-game-info {
+  flex: 1;
+  color: white;
+}
+
+.featured-game-info h2 {
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+  color: #ffd700;
+}
+
+.featured-game-info p {
+  font-size: 1rem;
+  color: #eee;
+  margin-bottom: 5px;
+}
+
+.featured-rating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.featured-rating .stars {
+  font-size: 1.2rem;
+}
+
+.featured-rating .reviews {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+
+.library-section {
+  margin-bottom: 30px;
+}
+
+.library-scroll-horizontal {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+.library-scroll-horizontal::-webkit-scrollbar {
+  height: 8px;
+}
+
+.library-scroll-horizontal::-webkit-scrollbar-thumb {
+  background-color: #555;
+  border-radius: 4px;
+}
+
+.library-scroll-horizontal::-webkit-scrollbar-track {
+  background-color: #222;
+}
+
+
+.achievements-section {
+  margin-top: 20px;
+}
+
+.achievements-cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.achievement-card {
+  background-color: #1f1f1f;
+  color: white;
+  flex: 1;
+  min-width: 200px;
+  max-width: 300px;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.achievement-card:hover {
+  transform: translateY(-5px);
+}
+
+.achievement-icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 10px;
+}
+
+
+/*.dashboard-container.dark {
+  background-color: #131313;
+  color: #f5f5f5;
+}
+
+.dashboard-container.light {
+  background-color: #ffffff;
+  color: #111;
+}
+
+.dashboard-container.light .featured-game-section,
+.dashboard-container.light .achievement-card {
+  background-color: #e0e0e0;
+  color: #111;
+}
+
+.dashboard-container.dark .featured-game-section,
+.dashboard-container.dark .achievement-card {
+  background-color: #1f1f1f;
+  color: white;
+}
+
+/* === DASHBOARD MODO CLARO (adaptado al estilo general) === */
+
+.dashboard-container.light {
+  background-color: #f4f4f4; /* Igual al app-container.light */
+  color: #111;
+}
+
+/* Tarjetas del dashboard */
+.dashboard-container.light .featured-game-section,
+.dashboard-container.light .achievement-card {
+  background-color: #eaeaea;       /* Igual a la sidebar del modo claro */
+  color: #111;
+  border-radius: 12px;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.1); /* Igual estilo de sombras */
+  border: 1px solid #d3d3d3;       /* Suave, estilo minimalista */
+}
+
+/* Título destacado */
+.dashboard-container.light .featured-game-info h2 {
+  color: #d4a000; /* Dorado suave, ya lo traías */
+}
+
+/* Texto dentro de tarjetas */
+.dashboard-container.light .featured-game-info p {
+  color: #555; /* Coincide con .nav-item en modo claro */
+}
+
+/* Reseñas */
+.dashboard-container.light .featured-rating .reviews {
+  color: #666;
+}
+
+/* Imagen destacada */
+.dashboard-container.light .featured-game-img {
+  border-radius: 12px;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.12);
+}
+
+/* Scrollbars igualados al modo claro general */
+.dashboard-container.light ::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.dashboard-container.light ::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
