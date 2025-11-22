@@ -1,0 +1,152 @@
+
+.game-card {
+  width: 300px;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+  background-color: #1f1f1f;
+}
+
+.game-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+}
+
+.game-card.dark {
+  background-color: #1f1f1f;
+  color: #fff;
+}
+
+.game-card.light {
+  background-color: #f4f4f4;
+  color: #111;
+}
+
+.game-image {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-bottom: 3px solid rgba(0, 0, 0, 0.2);
+}
+
+.game-info {
+  padding: 0.9rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  flex: 1;
+}
+
+.game-info h3 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 0;
+  color: white;
+  white-space: normal;
+  line-height: 1.2;
+  overflow-wrap: break-word;
+}
+
+.game-info p {
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.85;
+  color: #aaa;
+}
+
+.info-row {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.text-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  flex: 1;
+}
+
+.start-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: none;
+  background-color: #3b82f6;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.25s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.start-btn:hover {
+  background-color: #2563eb;
+  transform: scale(1.1);
+}
+.remove-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: none;
+  background-color: #dc2626;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.remove-btn:hover {
+  background-color: #b91c1c;
+  transform: scale(1.1);
+}
+
+/* === GAME CARD - MODO CLARO ADAPTADO === */
+
+.game-card.light {
+  background-color: #eaeaea; /* Igual que .sidebar en modo claro */
+  color: #111;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.1); /* Misma sombra suave del dashboard */
+  border: 1px solid #d3d3d3; /* Borde elegante suave */
+}
+
+/* Título en modo claro */
+.game-card.light .game-info h3 {
+  color: #111; 
+}
+
+/* Texto secundario */
+.game-card.light .game-info p {
+  color: #555; /* Igual a .nav-item.light */
+  opacity: 1;
+}
+
+/* Línea separadora */
+.game-card.light .info-row {
+  border-top: 1px solid rgba(0, 0, 0, 0.15); /* Gris suave */
+}
+
+/* Botones se mantienen igual (ya van con tus colores corporativos) */
+.game-card.light .start-btn {
+  background-color: #3b82f6;
+  color: white;
+}
+.game-card.light .start-btn:hover {
+  background-color: #2563eb;
+} 
