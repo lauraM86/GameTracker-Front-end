@@ -1,0 +1,141 @@
+.library-container {
+  flex: 1;
+  min-height: 100vh;
+  background-color: #131313;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  transition: background 0.3s, color 0.3s;
+  width: 100%;
+  padding: 2rem; 
+}
+
+.library-container.dark {
+  background-color: #131313;
+  color: white;
+}
+
+.library-container.light {
+  background-color: #f4f4f4;
+  color: #111;
+}
+
+.library-content {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.library-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: flex-start;
+  gap: 1rem;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.library-header h1 {
+  font-size: 2rem;
+  color: #3b82f6;
+  margin: 0;
+  text-align: center;
+}
+
+.search-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 0.8rem;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  z-index: 1;
+  transition: color 0.3s ease;
+}
+
+.library-container.dark .search-icon {
+  color: #aaa;
+}
+
+.library-container.light .search-icon {
+  color: #666;
+}
+
+.search-bar {
+  display: block;
+  width: 100%;
+  height: 28px;
+  padding: 0 1.5rem 0 2.5rem;
+  font-size: 1.05rem;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.library-container.dark .search-bar {
+  background-color: #1e1e1e;
+  color: white;
+}
+
+.library-container.light .search-bar {
+  background-color: #e0e0e0;
+  color: #111;
+}
+
+.search-bar:focus {
+  box-shadow: 0 0 5px #3b82f6;
+}
+
+.library-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center; 
+  width: 100%;
+}
+
+.library-card {
+  border-radius: 10px;
+  overflow: hidden;
+  width: 150px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.no-results,
+.loading {
+  text-align: center;
+  width: 100%;
+  color: #ccc;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .library-container {
+    padding: 1.5rem;
+  }
+
+  .library-header h1 {
+    font-size: 1.6rem;
+  }
+
+  .search-bar {
+    max-width: 100%;
+    padding: 0 1rem 0 2.5rem;
+  }
+
+  .library-grid {
+    justify-content: center;
+  }
+}
