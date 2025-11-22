@@ -1,0 +1,246 @@
+.app-container {
+  display: flex;
+  height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+  transition: background 0.3s, color 0.3s;
+}
+
+.sidebar {
+  width: 240px;
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 2px 0 6px rgba(0,0,0,0.4);
+  transition: background 0.3s, color 0.3s;
+}
+
+.sidebar-header .profile {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.username {
+  font-weight: bold;
+  font-size: 16px;
+  color: inherit;
+}
+
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  padding: 0.5rem 0.7rem;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+
+.nav-item:hover {
+  background-color: #3b82f6;
+  color: white;
+}
+
+
+.logout-btn {
+  font-weight: bold;     
+  font-size: 1rem;        
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;         
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0.5rem 0.7rem; 
+  border-radius: 6px;     
+  color: inherit;          
+}
+
+.logout-btn:hover {
+  background-color: #3b82f6;
+  color: white;
+}
+
+
+.bottom-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+
+.add-game-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #303235; 
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  justify-content: flex-start; 
+}
+
+.add-game-btn:hover {
+  background-color: #393b3d; 
+}
+
+.mode-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #303235; 
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  justify-content: flex-start;
+}
+
+.mode-toggle:hover {
+  background-color: #393b3d; 
+}
+
+
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+  transition: background 0.3s, color 0.3s;
+}
+
+
+.app-container.dark {
+  background-color: #131313;
+  color: #f5f5f5;
+}
+
+.app-container.dark .sidebar {
+  background-color: #1f1f1f;
+  color: #fff;
+}
+
+.app-container.dark .nav-item {
+  color: #ccc;
+}
+
+.app-container.dark .nav-item:hover {
+  background-color: #2563eb;
+  color: #fff;
+}
+
+.app-container.light {
+  background-color: #f4f4f4;
+  color: #111;
+}
+
+.app-container.light .sidebar {
+  background-color: #eaeaea;
+  color: #222;
+}
+
+.app-container.light .nav-item {
+  color: #555;
+}
+
+.app-container.light .nav-item:hover {
+  background-color: #3b82f6;
+  color: #fff;
+}
+
+
+.splash-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #0c0c0c;
+  color: rgb(9, 9, 9);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.splash-screen h1 {
+  margin-top: 1rem;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  color: #3b82f6;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.sidebar-bottom {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  padding-top: 1rem;
+}
+
+
+
+::-webkit-scrollbar {
+  width: 8px; 
+  height: 8px; 
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; 
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.2); 
+  transition: background 0.3s ease; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.4); 
+}
+
+
+body.dark ::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3); 
+}
+
+body.dark ::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+
+body.light ::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.3); 
+}
+
+body.light ::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+* {
+  scrollbar-width: thin; 
+  scrollbar-color: rgba(255, 255, 255, 0.2) transparent; 
+}
+
+
+body.dark {
+  scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+}
+
+body.light {
+  scrollbar-color: rgba(0, 0, 0, 0.3) transparent;
+}

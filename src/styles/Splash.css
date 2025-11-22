@@ -1,0 +1,48 @@
+.splash-container {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #0a0a0a;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  z-index: 9999;
+}
+
+.splash-logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.splash-icon {
+  color: #00bfff;
+  animation: pulse 2s infinite;
+}
+
+.splash-title {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px #00bfff, 0 0 20px #00bfff;
+}
+
+.splash-subtitle {
+  margin-top: 15px;
+  font-size: 1.2rem;
+  opacity: 0.7;
+  letter-spacing: 1px;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 8px #00bfff);
+  }
+  50% {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 16px #00ffff);
+  }
+}
